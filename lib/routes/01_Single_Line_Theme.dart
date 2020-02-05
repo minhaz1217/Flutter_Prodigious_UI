@@ -5,22 +5,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_prodigious_ui/Utility.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const MaterialColor color1 = Colors.orange;
+const MaterialColor color1 = Colors.yellow;
 const Color iconColor = Colors.black;
 const double iconSize = 30.0;
-//void main() {
-//  runApp(MyApp());
-//  SystemChrome.setSystemUIOverlayStyle(
-//    const SystemUiOverlayStyle(
-//      statusBarColor: color1,
-//      systemNavigationBarColor: color1,
-//      systemNavigationBarDividerColor: color1,
-//      systemNavigationBarIconBrightness: Brightness.dark,
-//    ),
-//  );
-//}
 
 class Single_Line_Theme extends StatelessWidget {
+
+  static String name  = "/Single_Line_Theme";
+
   @override
   Widget build(BuildContext context) {
     changeApplicationTheme(color1);
@@ -33,10 +25,10 @@ class Single_Line_Theme extends StatelessWidget {
 }
 
 class Single_Line_Theme_Stateful extends StatefulWidget {
-
   @override
   _Single_Line_Theme_State  createState() {
 
+    changeApplicationTheme(color1);
     return _Single_Line_Theme_State();
   }
 }
@@ -88,7 +80,7 @@ class _Single_Line_Theme_State extends State<Single_Line_Theme_Stateful> {
         alignment: Alignment.center,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text("Yo mama so old, \nshe co-wrote the Ten Commandments",style: GoogleFonts.dosis(fontSize: 36.0,
+          child: Text("Living on earth may be expensive, but it includes an annual free trip around the sun.",style: GoogleFonts.dosis(fontSize: 36.0,
             fontWeight: FontWeight.w800,
           ), textAlign: TextAlign.center, softWrap: true,),
         ),
@@ -118,7 +110,6 @@ class _Single_Line_Theme_State extends State<Single_Line_Theme_Stateful> {
 
         ],
       ),
-
     );
   }
 }
